@@ -47,7 +47,7 @@ def parse_file( fname, points, transform, screen, color ):
         if command == 'scale':
             scale = make_scale(int(inputs[0]), int(inputs[1]), int(inputs[2]))
             matrix_mult(scale, transform)
-        if command == 'translate':
+        if command == 'translate' or command == 'move':
             translate = make_translate(int(inputs[0]), int(inputs[1]), int(inputs[2]))
             matrix_mult(translate, transform)
         if command == 'rotate':
